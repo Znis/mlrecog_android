@@ -1,0 +1,161 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    ~ Copyright 2022 The TensorFlow Authors. All Rights Reserved.
+4    ~
+5    ~ Licensed under the Apache License, Version 2.0 (the "License");
+6    ~ you may not use this file except in compliance with the License.
+7    ~ You may obtain a copy of the License at
+8    ~
+9    ~       http://www.apache.org/licenses/LICENSE-2.0
+10    ~
+11    ~ Unless required by applicable law or agreed to in writing, software
+12    ~ distributed under the License is distributed on an "AS IS" BASIS,
+13    ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14    ~ See the License for the specific language governing permissions and
+15    ~ limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    xmlns:dist="http://schemas.android.com/apk/distribution"
+19    package="org.tensorflow.lite.examples.objectdetection"
+20    android:versionCode="1"
+21    android:versionName="1.0.2" >
+22
+23    <uses-sdk
+24        android:minSdkVersion="21"
+24-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml
+25        android:targetSdkVersion="32" />
+25-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml
+26
+27    <!-- Enable instant app support -->
+28    <dist:module dist:instant="true" />
+28-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:24:5-40
+28-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:24:18-37
+29
+30    <!-- Declare features -->
+31    <uses-feature android:name="android.hardware.camera" />
+31-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:27:5-60
+31-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:27:19-57
+32
+33    <!-- Declare permissions -->
+34    <uses-permission android:name="android.permission.CAMERA" />
+34-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:32:5-65
+34-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:32:22-62
+35    <uses-permission android:name="android.permission.INTERNET" />
+35-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:33:5-67
+35-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:33:22-64
+36    <!-- Permissions for the Android below 11 (R) -->
+37    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+37-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:35:5-79
+37-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:35:22-77
+38    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+38-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:36:5-80
+38-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:36:22-78
+39    <!-- Permission for the Android 11 (R) and above -->
+40    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+40-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:38:5-81
+40-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:38:22-79
+41    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Android 10 only requires android:requestLegacyExternalStorage="true" -->
+42    <application
+42-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:42:5-73:19
+43        android:allowBackup="true"
+43-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:46:9-35
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.6.0] C:\Users\metwa\.gradle\caches\transforms-3\d0b737f69124150e0b3e44f1b6ab962c\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+45        android:debuggable="true"
+46        android:icon="@mipmap/ic_launcher"
+46-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:43:9-43
+47        android:label="@string/app_name"
+47-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:45:9-41
+48        android:networkSecurityConfig="@xml/network_security_config"
+48-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:49:9-69
+49        android:roundIcon="@mipmap/ic_launcher_round"
+49-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:44:9-54
+50        android:taskAffinity="" >
+50-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:47:9-32
+51        <activity
+51-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:51:9-71:20
+52            android:name="org.tensorflow.lite.examples.objectdetection.MainActivity"
+52-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:52:13-41
+53            android:clearTaskOnLaunch="true"
+53-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:53:13-45
+54            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+54-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:59:13-91
+55            android:exported="true"
+55-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:55:13-36
+56            android:icon="@mipmap/ic_launcher"
+56-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:56:13-47
+57            android:resizeableActivity="true"
+57-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:58:13-46
+58            android:rotationAnimation="seamless"
+58-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:57:13-49
+59            android:theme="@style/AppTheme" >
+59-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:54:13-44
+60
+61            <!-- Main app intent filter -->
+62            <intent-filter>
+62-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:63:13-66:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:64:17-69
+63-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:64:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:65:17-77
+65-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:65:27-74
+66            </intent-filter>
+67
+68            <!-- Declare notch support -->
+69            <meta-data
+69-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:69:13-83
+70                android:name="android.notch_support"
+70-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:69:24-60
+71                android:value="true" />
+71-->C:\Users\metwa\Downloads\od\app\src\main\AndroidManifest.xml:69:61-81
+72        </activity>
+73
+74        <uses-library
+74-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:25:9-27:40
+75            android:name="androidx.window.extensions"
+75-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:26:13-54
+76            android:required="false" />
+76-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:27:13-37
+77        <uses-library
+77-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:28:9-30:40
+78            android:name="androidx.window.sidecar"
+78-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:29:13-51
+79            android:required="false" />
+79-->[androidx.window:window:1.0.0-alpha09] C:\Users\metwa\.gradle\caches\transforms-3\e89659e7d71760a1fe00eca773e2f411\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:30:13-37
+80
+81        <service
+81-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:26:9-35:19
+82            android:name="androidx.camera.core.impl.MetadataHolderService"
+82-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:27:13-75
+83            android:enabled="false"
+83-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:28:13-36
+84            android:exported="false" >
+84-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:29:13-37
+85            <meta-data
+85-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:32:13-34:89
+86                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+86-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:33:17-103
+87                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+87-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\metwa\.gradle\caches\transforms-3\4296c1a8d25b91d8df7455e61f84c05c\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:34:17-86
+88        </service>
+89
+90        <provider
+90-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+91            android:name="androidx.startup.InitializationProvider"
+91-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:27:13-67
+92            android:authorities="org.tensorflow.lite.examples.objectdetection.androidx-startup"
+92-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:28:13-68
+93            android:exported="false" >
+93-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:29:13-37
+94            <meta-data
+94-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+95-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+96                android:value="androidx.startup" />
+96-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\metwa\.gradle\caches\transforms-3\36dc4a49a1d6d99498401d81cff2f7a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+97        </provider>
+98    </application>
+99
+100</manifest>
